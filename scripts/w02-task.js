@@ -1,12 +1,12 @@
 /* W02-Task - Profile Home Page */
 
 /* Step 1 - Setup type tasks - no code required */
-
+console.log("My name is Becky");
 
 /* Step 2 - Variables */
-const fullname = "Becky Lutz";
+let fullName = "Becky Lutz";
 let currentYear = new Date().getFullYear();
-let profilePicture = "images/IMG_6989_Original.JPG"
+let profilePicture = "images/IMG_6989_Original.jpg";
 
 
 /* Step 3 - Element Variables */
@@ -19,17 +19,17 @@ const imageElement = document.querySelector("#image");
 /* Step 4 - Adding Content */
 nameElement.innerHTML = `<strong>${fullName}</strong>`;
 currentYear.textContent = `${currentYear}`;
-imageElement.setAttribute ("src", profilePicture);
-nameElement.setAttribute ("alt", `Profile image of ${fullname}`);
+imageElement.setAttribute("src", profilePicture);
+nameElement.setAttribute("alt", `Profile image of ${fullName}`);
 
 
 /* Step 5 - Array */
 let favoriteFoods = ["pear", "peaches", "cucumbers", "green peppers", "trail mix"]
-foodElement.food = `${favoriteFoods}`;
+foodElement.innerHTML = favoriteFoods.join();
 let newFavoriteFood = "popcorn";
 favoriteFoods.push(newFavoriteFood);
-foodElement.innerHTML += `<br>${favoriteFoods}`;
+foodElement.innerHTML += `<br>${favoriteFoods.join()}`;
 favoriteFoods.shift();
-foodElement.innerHTML += `<br>${favoriteFoods}`;
-fovoriteFoods.pop();
-foodElement.innerHTML += `<br>${favoriteFoods}`;
+foodElement.innerHTML += `<br>${favoriteFoods.join()}`;
+favoriteFoods.pop();
+foodElement.innerHTML += `<br>${favoriteFoods.join()}`;
