@@ -54,15 +54,28 @@ document.querySelector("#year").value = currentYear;
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
 let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+
 let arrayAsString = numbersArray.join(", ")
-document.querySelector("#array").value = arrayAsString;
+document.getElementById("array").textContent = arrayAsString;
 
 /* Output Odds Only Array */
+const oddNumbers = numbersArray.filter(number => number % 2 ===1);
+document.getElementById("odds").textContent = oddNumbers.join(", ");
 
 /* Output Evens Only Array */
+document.querySelector("#evens").innerHTML = numbersArray.filter(number => number % 2 === 0);
 
 /* Output Sum of Org. Array */
+const sum = numbersArray.reduce((sum, number) => sum + number)
+document.querySelector("#sumOfArray").innerHTML = sum;
 
 /* Output Multiplied by 2 Array */
+const multipliedArray = numbersArray.map(number => number *2)
+document.querySelector("#multiplied").innerHTML = multipliedArray;
 
 /* Output Sum of Multiplied by 2 Array */
+// const multipliedArraySum = multipliedArray.reduce((sum1, number1)=> sum1 + number1, 0);
+// document.querySelector("#sumOfMultilied").innerHTML = multipliedSum;
+const multipliedArray2 = numbersArray.map(number => number *2)
+const sum2 = multipliedArray2.reduce((sum, number) => sum + number)
+document.querySelector("#sumOfMultiplied").innerHTML = sum2;
